@@ -32,7 +32,7 @@ var getMaxElement = function (arr) {
 
 var getRandomFromInterval = function (min, max) {
   return Math.random() * (max - min) + min;
-}
+};
 
 window.renderStatistics = function (ctx, players, times) {
   var inputPosition = START_POSITION;
