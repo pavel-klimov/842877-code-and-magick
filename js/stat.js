@@ -66,7 +66,7 @@ window.renderStatistics = function (ctx, players, times) {
     ctx.fillText(players[i], xPosition, yPosition + columnHeigth + fontLength);
 
     // Переключаем цвет колонки и выводим её:
-    ctx.fillStyle = (players[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'hsl(240, ' + getRandomFromInterval(25, 50) + '%, ' + getRandomFromInterval(25, 50) + '%)';
+    ctx.fillStyle = (players[i] === 'Вы') ? 'rgb(255, 0, 0)' : 'hsl(240, ' + getRandomFromInterval(25, 50) + '%, ' + getRandomFromInterval(25, 50) + '%)';
     ctx.fillRect(xPosition, yPosition, BAR_WIDTH, columnHeigth);
   }
 };
