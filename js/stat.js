@@ -30,6 +30,10 @@ var getMaxElement = function (arr) {
   return maxElement;
 };
 
+var getRandomFromInterval = function (min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 window.renderStatistics = function (ctx, players, times) {
   var inputPosition = START_POSITION;
   var pointPixelCost = BAR_HEIGHT / getMaxElement(times);
@@ -62,7 +66,7 @@ window.renderStatistics = function (ctx, players, times) {
     ctx.fillText(players[i], xPosition, yPosition + columnHeigth + fontLength);
 
     // Переключаем цвет колонки и выводим её:
-    ctx.fillStyle = (players[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'hsl(240, ' + (Math.random() * 50 + 25) + '%, ' + (Math.random() * 50 + 25) + '%)';
+    ctx.fillStyle = (players[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'hsl(240, ' + getRandomFromInterval(25, 50) + '%, ' + getRandomFromInterval(25, 50) + '%)';
     ctx.fillRect(xPosition, yPosition, BAR_WIDTH, columnHeigth);
   }
 };
