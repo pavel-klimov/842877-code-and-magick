@@ -1,9 +1,9 @@
 'use strict';
 
-var MOCK_FIRST_NAME = ['Иван', 'Хуан Себастьян', 'Мария', 'Виктор', 'Кристоф', 'Люпита', 'Юлия', 'Вашингтон'];
-var MOCK_SECOND_NAME = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
-var MOCK_COAT_COLOR = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
-var MOCK_EYES_COLOR = ['black', 'red', 'blue', 'yellow', 'green'];
+var MOCK_FIRST_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Виктор', 'Кристоф', 'Люпита', 'Юлия', 'Вашингтон'];
+var MOCK_SECOND_NAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
+var MOCK_COAT_COLORS = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
+var MOCK_EYES_COLORS = ['black', 'red', 'blue', 'yellow', 'green'];
 var WIZARD_NUMBERS = 4;
 
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
@@ -20,9 +20,9 @@ var getRandomFromArray = function (array) {
 
 var getRandomWizard = function () {
   return {
-    name: getRandomFromArray(MOCK_FIRST_NAME) + ' ' + getRandomFromArray(MOCK_SECOND_NAME),
-    coatColor: getRandomFromArray(MOCK_COAT_COLOR),
-    eyesColor: getRandomFromArray(MOCK_EYES_COLOR)
+    name: getRandomFromArray(MOCK_FIRST_NAMES) + ' ' + getRandomFromArray(MOCK_SECOND_NAMES),
+    coatColor: getRandomFromArray(MOCK_COAT_COLORS),
+    eyesColor: getRandomFromArray(MOCK_EYES_COLORS)
   };
 };
 
