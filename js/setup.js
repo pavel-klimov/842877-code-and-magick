@@ -11,7 +11,7 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
     .querySelector('.setup-similar-item');
 
 var getRandomIntFromInterval = function (min, max) {
-  return Math.round(Math.random()) * (max - min) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 };
 
 var getRandomFromArray = function (array) {
